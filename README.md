@@ -1,41 +1,17 @@
-# .
+# Docker Project
 
-This template should help get you started developing with Vue 3 in Vite.
+Este projeto utiliza Docker para construir e servir uma aplicação Node.js com arquivos estáticos, usando o Nginx como servidor web.
 
-## Recommended IDE Setup
+## Estrutura do Projeto
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Etapa 1: Build**
+  - Usa a imagem `node:lts-alpine` para instalar dependências e construir os arquivos estáticos.
+- **Etapa 2: Produção**
+  - Usa a imagem `nginx:stable-alpine` para servir os arquivos estáticos gerados.
 
-## Customize configuration
+## Pré-requisitos
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Certifique-se de ter o Docker instalado em sua máquina. Você pode verificar a instalação com o comando:
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+```bash
+docker --version
